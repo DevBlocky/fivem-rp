@@ -127,7 +127,7 @@
   <ItemGroup>
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="plugin\moto_control_plugin.cpp" />
+    <ClCompile Include="plugin\prevent_roll_plugin.cpp" />
     <ClCompile Include="plugin\blips_plugin.cpp" />
     <ClCompile Include="plugin\gamertag_plugin.cpp" />
     <ClCompile Include="plugin\plugin_handle.cpp" />

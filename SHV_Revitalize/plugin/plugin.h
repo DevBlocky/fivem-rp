@@ -12,7 +12,7 @@ class reticle_plugin : public plugin
 public:
 	void on_tick() override;
 };
-class moto_control_plugin : public plugin
+class prevent_roll_plugin : public plugin
 {
 public:
 	void on_tick() override;

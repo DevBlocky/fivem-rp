@@ -7,7 +7,7 @@ void initialize_plugins()
 	std::vector<plugin*> *arr = new std::vector<plugin*>
 	{
 		new reticle_plugin(),
-		new moto_control_plugin(),
+		new prevent_roll_plugin(),
 		new blips_plugin(),
 		new gamertag_plugin(),
 	};

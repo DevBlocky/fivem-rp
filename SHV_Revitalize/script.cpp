@@ -1,4 +1,17 @@
+// needed
 #include "script.h"
+
+// main stuff
+#include "inc/main.h"
+#include <vector>
+#include "plugin/plugin.h"
+#include "plugin/plugin_handle.h"
+
+// plugin types
+#include "plugin/reticle_plugin.h"
+#include "plugin/prevent_roll_plugin.h"
+#include "plugin/blips_plugin.h"
+#include "plugin/gamertag_plugin.h"
 
 plugin_handle *handler;
 

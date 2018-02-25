@@ -1,23 +1,23 @@
 #include "script.h"
 
-plugin_handle handler;
+plugin_handle *handler;
 
 void initialize_plugins()
 {
-	const std::vector<plugin*> arr
+	std::vector<plugin*> *arr = new std::vector<plugin*>
 	{
 		new reticle_plugin(),
 		new moto_control_plugin(),
 		new blips_plugin(),
 		new gamertag_plugin(),
 	};
-	handler.plugin_init(arr);
+	handler = new plugin_handle(arr);
 }
 int main() {
 	initialize_plugins();
 	while (true)
 	{
-		handler.plugin_on_tick();
+		handler->plugin_on_tick();
 		WAIT(1);
 	}
 	return 0;
@@ -28,5 +28,6 @@ void script_main() {
 }
 void script_end()
 {
-	handler.plugin_shutdown();
+	handler->plugin_shutdown();
+	delete handler;
 }

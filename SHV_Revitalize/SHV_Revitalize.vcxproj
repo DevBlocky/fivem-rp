@@ -89,6 +89,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>"lib/ScriptHookV.lib";%(AdditionalDependencies)</AdditionalDependencies>
@@ -129,6 +130,7 @@
     <ClCompile Include="plugin\moto_control_plugin.cpp" />
     <ClCompile Include="plugin\blips_plugin.cpp" />
     <ClCompile Include="plugin\gamertag_plugin.cpp" />
+    <ClCompile Include="plugin\plugin_handle.cpp" />
     <ClCompile Include="plugin\reticle_plugin.cpp" />
     <ClCompile Include="script.cpp" />
   </ItemGroup>

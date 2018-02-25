@@ -1,5 +1,5 @@
-#include "plugin.h"
 #include "../inc/natives.h"
+#include "blips_plugin.h"
 
 #define FIND_BY_SPRITE
 

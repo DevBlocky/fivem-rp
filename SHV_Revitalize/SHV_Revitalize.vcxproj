@@ -141,8 +141,12 @@
     <ClInclude Include="inc\natives.h" />
     <ClInclude Include="inc\types.h" />
     <ClInclude Include="keyboard.h" />
+    <ClInclude Include="plugin\blips_plugin.h" />
+    <ClInclude Include="plugin\gamertag_plugin.h" />
     <ClInclude Include="plugin\plugin.h" />
     <ClInclude Include="plugin\plugin_handle.h" />
+    <ClInclude Include="plugin\prevent_roll_plugin.h" />
+    <ClInclude Include="plugin\reticle_plugin.h" />
     <ClInclude Include="script.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

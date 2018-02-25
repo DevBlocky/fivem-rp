@@ -1,5 +1,5 @@
-#include "plugin.h"
 #include "../inc/natives.h"
+#include "reticle_plugin.h"
 
 void reticle_plugin::on_tick()
 {

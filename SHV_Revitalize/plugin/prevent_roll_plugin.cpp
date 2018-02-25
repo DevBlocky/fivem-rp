@@ -1,5 +1,5 @@
-#include "plugin.h"
 #include "../inc/natives.h"
+#include "prevent_roll_plugin.h"
 
 // ReSharper disable once IdentifierTypo
 #define ALLOW_MOTO_CONTROL

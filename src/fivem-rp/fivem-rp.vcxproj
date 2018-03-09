@@ -75,6 +75,7 @@
   <ItemGroup>
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="plugin\give_weapon_plugin.cpp" />
     <ClCompile Include="plugin\prevent_roll_plugin.cpp" />
     <ClCompile Include="plugin\blips_plugin.cpp" />
     <ClCompile Include="plugin\gamertag_plugin.cpp" />
@@ -91,6 +92,7 @@
     <ClInclude Include="keyboard.h" />
     <ClInclude Include="plugin\blips_plugin.h" />
     <ClInclude Include="plugin\gamertag_plugin.h" />
+    <ClInclude Include="plugin\give_weapon_plugin.h" />
     <ClInclude Include="plugin\plugin.h" />
     <ClInclude Include="plugin\plugin_handle.h" />
     <ClInclude Include="plugin\prevent_roll_plugin.h" />

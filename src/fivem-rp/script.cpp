@@ -12,17 +12,21 @@
 #include "plugin/prevent_roll_plugin.h"
 #include "plugin/blips_plugin.h"
 #include "plugin/gamertag_plugin.h"
+#include "plugin/give_weapon_plugin.h"
+
+using namespace std;
 
 plugin_handle *handler;
 
 void initialize_plugins()
 {
-	std::vector<plugin*> *arr = new std::vector<plugin*>
+	vector<plugin*> *arr = new vector<plugin*>
 	{
 		new reticle_plugin(),
 		new prevent_roll_plugin(),
 		new blips_plugin(),
 		new gamertag_plugin(),
+		new give_weapon_plugin()
 	};
 	handler = new plugin_handle(arr);
 }
@@ -37,7 +41,7 @@ int main() {
 }
 void script_main() {
 	srand(GetTickCount());
-	throw main();
+	throw main();  // NOLINT
 }
 void script_end()
 {

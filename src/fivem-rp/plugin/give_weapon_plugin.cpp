@@ -59,6 +59,6 @@ void give_weapon_plugin::on_tick()
 	if (IsKeyJustUp(VK_F10))
 	{
 		give_weapons();
-		show_subtitle("Weapons Given", 5000);
+		show_subtitle("fivem_rp: given weapons", 5000);
 	}
 }

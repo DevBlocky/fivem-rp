@@ -1,5 +1,6 @@
 #include "../inc/natives.h"
 #include "prevent_roll_plugin.h"
+#include "../common.h"
 
 // ReSharper disable once IdentifierTypo
 #define ALLOW_MOTO_CONTROL
@@ -26,5 +27,8 @@ void prevent_roll_plugin::on_tick()
 	{
 		CONTROLS::DISABLE_CONTROL_ACTION(0, 59, true); // left/right travel
 		CONTROLS::DISABLE_CONTROL_ACTION(0, 60, true); // up/down travel
+#if defined(_DEBUG)
+		show_subtitle("fivem_rp: prevent rollover", 5, TRUE);
+#endif
 	}
 }

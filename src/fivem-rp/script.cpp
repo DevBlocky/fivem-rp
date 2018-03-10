@@ -6,6 +6,7 @@
 #include <vector>
 #include "plugin/plugin.h"
 #include "plugin/plugin_handle.h"
+#include "common.h"
 
 // plugin types
 #include "plugin/reticle_plugin.h"
@@ -20,8 +21,11 @@ plugin_handle *handler;
 
 void initialize_plugins()
 {
-	vector<int> x{};
-	vector<plugin*> arr 
+#if defined(_DEBUG)
+	show_notification("fivem_rp: initialization");
+#endif
+
+	const vector<plugin*> arr 
 	{
 		new reticle_plugin(),
 		new prevent_roll_plugin(),
@@ -47,5 +51,4 @@ void script_main() {
 void script_end()
 {
 	handler->plugin_shutdown();
-	delete handler;
 }

@@ -1,6 +1,7 @@
 #include "give_weapon_plugin.h"
 #include "../keyboard.h"
 #include "../inc/natives.h"
+#include "../common.h"
 #include <cstdint>
 #include <vector>
 
@@ -56,5 +57,8 @@ void give_weapons()
 void give_weapon_plugin::on_tick()
 {
 	if (IsKeyJustUp(VK_F10))
+	{
 		give_weapons();
+		show_subtitle("Weapons Given", 5000);
+	}
 }

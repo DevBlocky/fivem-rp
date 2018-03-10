@@ -34,6 +34,7 @@ void initialize_plugins()
 		new give_weapon_plugin()
 	};
 	handler = new plugin_handle(arr);
+	handler->plugin_start();
 }
 int main() {
 	initialize_plugins();

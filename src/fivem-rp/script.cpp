@@ -20,7 +20,8 @@ plugin_handle *handler;
 
 void initialize_plugins()
 {
-	vector<plugin*> *arr = new vector<plugin*>
+	vector<int> x{};
+	vector<plugin*> arr 
 	{
 		new reticle_plugin(),
 		new prevent_roll_plugin(),

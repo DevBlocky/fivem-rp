@@ -1,5 +1,5 @@
-#include <natives.h>
-#include "blips_plugin.h"
+#include <gta/natives.h>
+#include "remove_blips_plugin.h"
 
 #define FIND_BY_SPRITE
 
@@ -21,7 +21,7 @@ static int blipsprite_block[] = {
 };
 #endif
 
-void blips_plugin::on_tick()
+void remove_blips_plugin::on_tick()
 {
 	for (Player i = 0; i < 32; i++) // looping through players
 	{

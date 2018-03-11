@@ -1,0 +1,15 @@
+{
+    "feature-enable": {
+        "reticle_plugin": true,
+        "prevent_roll_plugin": true,
+        "remove_blips_plugin": true,
+        "remove_gamertag_plugin": true,
+        "give_weapon_plugin": true
+    },
+    "keys": {
+        "reload_settings": 120,
+        "give_weapons": 121,
+        "remove_weapons": 122,
+        "show_problem": 123
+    }
+}

@@ -1,8 +1,9 @@
 #include "give_weapon_plugin.h"
 #include "../keyboard.h"
-#include <natives.h>
+#include <gta/natives.h>
 #include "../common.h"
 #include <vector>
+#include "../settings.h"
 
 using namespace std;
 
@@ -57,14 +58,17 @@ void give_weapons()
 }
 void give_weapon_plugin::on_tick()
 {
-	if (IsKeyJustUp(VK_F10))
+	settings &settings = get_settings();
+	const auto key1 = get_settings_key(settings, "give_weapons");
+	if (IsKeyJustUp(key1.first ? VK_F10 : key1.second))
 	{
 		give_weapons();
-		message_user("given weapons", 5000);
+		message_user("given weapons");
 	}
-	if (IsKeyJustUp(VK_F11))
+	const auto key2 = get_settings_key(settings, "remove_weapons");
+	if (IsKeyJustUp(key2.first ? VK_F11 : key2.second))
 	{
 		remove_weapons();
-		message_user("removed weapons", 5000);
+		message_user("removed weapons");
 	}
 }

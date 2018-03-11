@@ -1,5 +1,5 @@
 #include "common.h"
-#include <natives.h>
+#include <gta/natives.h>
 
 int show_notification(const std::string& message, const BOOL blink, const BOOL in_brief)
 {

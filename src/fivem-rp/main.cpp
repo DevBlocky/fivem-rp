@@ -4,7 +4,7 @@
 			(C) Alexander Blade 2015
 */
 
-#include <main.h>
+#include <gta/main.h>
 #include "script.h"
 #include "keyboard.h"
 

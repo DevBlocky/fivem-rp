@@ -1,7 +1,7 @@
-#include <natives.h>
-#include "gamertag_plugin.h"
+#include <gta/natives.h>
+#include "remove_gamertag_plugin.h"
 
-void gamertag_plugin::on_tick()
+void remove_gamertag_plugin::on_tick()
 {
 	const Player player = PLAYER::PLAYER_ID();
 

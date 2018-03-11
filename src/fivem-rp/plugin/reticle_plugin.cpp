@@ -1,4 +1,4 @@
-#include <natives.h>
+#include <gta/natives.h>
 #include "reticle_plugin.h"
 #include "../common.h"
 

@@ -7,18 +7,23 @@ plugin_handle::plugin_handle(const vector<plugin*>& plugins)
 void plugin_handle::plugin_start()
 {
 	for (auto plugin : this->plugins_)
-		plugin->on_start();
+		if (plugin->enabled)
+			plugin->on_start();
 }
 void plugin_handle::plugin_on_tick() const
 {
 	for (auto plugin : plugins_)
-		plugin->on_tick();
+		if (plugin->enabled)
+			plugin->on_tick();
 }
 void plugin_handle::plugin_shutdown() const
 {
 	for (auto plugin : plugins_)
 	{
-		plugin->on_stop();
-		delete plugin;
+		if (plugin->enabled)
+		{
+			plugin->on_stop();
+			delete plugin;
+		}
 	}
 }

@@ -3,7 +3,6 @@
 
 // main stuff
 #include <gta/main.h>
-#include <typeinfo>
 #include "plugin/plugin.h"
 #include "plugin/plugin_handle.h"
 #include "common.h"
@@ -38,7 +37,7 @@ void initialize_plugins()
 	{
 		const string name = plugin->get_name();
 		const auto feat_info = get_settings_feature(settings, name);
-		plugin->enabled = feat_info.second;
+		plugin->enabled = feat_info.first ? true : feat_info.second;
 	}
 	
 	handler = new plugin_handle(arr);

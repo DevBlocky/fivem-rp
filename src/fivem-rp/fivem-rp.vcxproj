@@ -51,7 +51,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>"lib/ScriptHookV.lib";%(AdditionalDependencies)</AdditionalDependencies>
@@ -86,11 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
-    <ClInclude Include="inc\enums.h" />
-    <ClInclude Include="inc\main.h" />
-    <ClInclude Include="inc\nativeCaller.h" />
-    <ClInclude Include="inc\natives.h" />
-    <ClInclude Include="inc\types.h" />
     <ClInclude Include="keyboard.h" />
     <ClInclude Include="plugin\blips_plugin.h" />
     <ClInclude Include="plugin\gamertag_plugin.h" />

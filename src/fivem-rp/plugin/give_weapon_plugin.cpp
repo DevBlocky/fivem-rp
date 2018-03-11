@@ -1,8 +1,7 @@
 #include "give_weapon_plugin.h"
 #include "../keyboard.h"
-#include "../inc/natives.h"
+#include <natives.h>
 #include "../common.h"
-#include <cstdint>
 #include <vector>
 
 using namespace std;
@@ -38,13 +37,15 @@ weapon_info give_w[] = {
 		vector<Hash> {})
 };
 
+void remove_weapons()
+{
+	const Ped ped = PLAYER::GET_PLAYER_PED(PLAYER::PLAYER_ID());
+	WEAPON::REMOVE_ALL_PED_WEAPONS(ped, FALSE);
+}
+
 void give_weapons()
 {
 	const Ped ped = PLAYER::GET_PLAYER_PED(PLAYER::PLAYER_ID());
-
-	// remove all of the weapons prior
-	WEAPON::REMOVE_ALL_PED_WEAPONS(ped, FALSE);
-
 	for (const auto& weapon_info : give_w)
 	{
 		WEAPON::GIVE_WEAPON_TO_PED(ped, weapon_info.weapon, 9999, FALSE, FALSE);
@@ -59,6 +60,11 @@ void give_weapon_plugin::on_tick()
 	if (IsKeyJustUp(VK_F10))
 	{
 		give_weapons();
-		show_subtitle("fivem_rp: given weapons", 5000);
+		message_user("given weapons", 5000);
+	}
+	if (IsKeyJustUp(VK_F11))
+	{
+		remove_weapons();
+		message_user("removed weapons", 5000);
 	}
 }

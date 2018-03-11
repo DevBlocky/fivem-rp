@@ -1,5 +1,8 @@
 #pragma once
-#include "inc/types.h"
+#include <types.h>
+#include <string>
 
-int show_notification(const char *text, BOOL blink = FALSE, BOOL in_brief = FALSE);
-void show_subtitle(const char *message, int duration = 2500, BOOL draw_immediately = TRUE);
+inline int show_notification(const std::string &message, BOOL blink = FALSE, BOOL in_brief = FALSE);
+inline void show_subtitle(const std::string &message, int duration = 2500, BOOL draw_immediately = TRUE);
+void message_user(const std::string &message, int duration = 2500);
+void debug_message_user(const std::string &message, int duration = 2500);

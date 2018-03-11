@@ -1,4 +1,4 @@
-#include "../inc/natives.h"
+#include <natives.h>
 #include "gamertag_plugin.h"
 
 void gamertag_plugin::on_tick()

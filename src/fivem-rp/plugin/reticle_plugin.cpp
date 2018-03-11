@@ -1,4 +1,4 @@
-#include "../inc/natives.h"
+#include <natives.h>
 #include "reticle_plugin.h"
 #include "../common.h"
 
@@ -12,8 +12,6 @@ void reticle_plugin::on_tick()
 	if (weapon_hash != 2725352035 && is_aim) // checking for aiming and not hands
 	{
 		UI::SHOW_HUD_COMPONENT_THIS_FRAME(14); // showing the reticle
-#if defined(_DEBUG)
-		show_subtitle("fivem_rp: given reticle", 5, TRUE);
-#endif
+		debug_message_user("given reticle", 5);
 	}
 }

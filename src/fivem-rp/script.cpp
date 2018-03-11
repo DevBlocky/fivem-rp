@@ -2,7 +2,7 @@
 #include "script.h"
 
 // main stuff
-#include "inc/main.h"
+#include <main.h>
 #include <vector>
 #include "plugin/plugin.h"
 #include "plugin/plugin_handle.h"
@@ -21,10 +21,6 @@ plugin_handle *handler;
 
 void initialize_plugins()
 {
-#if defined(_DEBUG)
-	show_notification("fivem_rp: initialization");
-#endif
-
 	const vector<plugin*> arr 
 	{
 		new reticle_plugin(),
@@ -35,6 +31,8 @@ void initialize_plugins()
 	};
 	handler = new plugin_handle(arr);
 	handler->plugin_start();
+
+	debug_message_user("initialized");
 }
 int main() {
 	initialize_plugins();

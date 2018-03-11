@@ -83,6 +83,7 @@
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="plugin\give_weapon_plugin.cpp" />
+    <ClCompile Include="plugin\show_speed_plugin.cpp" />
     <ClCompile Include="plugin\prevent_roll_plugin.cpp" />
     <ClCompile Include="plugin\remove_blips_plugin.cpp" />
     <ClCompile Include="plugin\remove_gamertag_plugin.cpp" />
@@ -94,6 +95,7 @@
   <ItemGroup>
     <ClInclude Include="common.h" />
     <ClInclude Include="keyboard.h" />
+    <ClInclude Include="plugin\show_speed_plugin.h" />
     <ClInclude Include="plugin\remove_blips_plugin.h" />
     <ClInclude Include="plugin\remove_gamertag_plugin.h" />
     <ClInclude Include="plugin\give_weapon_plugin.h" />

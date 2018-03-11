@@ -7,6 +7,7 @@ typedef struct
 {
 	map<string, bool> enabled_features;
 	map<string, int> keys;
+	string measurement = "metric";
 	string problem = "none";
 } settings;
 

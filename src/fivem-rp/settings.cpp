@@ -46,6 +46,25 @@ void reload_settings(const std::string &path)
 	}
 	else
 		s->problem = "keys_null";
+
+	const Json::Value m = json.get("measurement", Json::Value());
+	if (!m.isNull())
+	{
+		if (m.isString())
+		{
+			const string str = m.asString();
+			if (str != "imperial" && str != "metric")
+			{
+				s->problem = "measurement_not_measurement";
+			}
+			else
+				s->measurement = str;
+		}
+		else
+			s->problem = "measurement_not_string";
+	}
+	else
+		s->problem = "measurement_null";
 }
 
 settings& get_settings()

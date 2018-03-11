@@ -15,6 +15,7 @@
 #include "plugin/remove_blips_plugin.h"
 #include "plugin/remove_gamertag_plugin.h"
 #include "plugin/give_weapon_plugin.h"
+#include "plugin/show_speed_plugin.h"
 
 #define SETTINGS_FILE string("fivem_rp.settings.json")
 
@@ -30,14 +31,19 @@ void initialize_plugins()
 		new prevent_roll_plugin(),
 		new remove_blips_plugin(),
 		new remove_gamertag_plugin(),
-		new give_weapon_plugin()
+		new give_weapon_plugin(),
+		new show_speed_plugin()
 	};
 	settings &settings = get_settings();
 	for (auto& plugin : arr)
 	{
 		const string name = plugin->get_name();
 		const auto feat_info = get_settings_feature(settings, name);
-		plugin->enabled = feat_info.first ? true : feat_info.second;
+		if (feat_info.first ? false : !feat_info.second)
+		{
+			delete plugin;
+			plugin = nullptr;
+		}
 	}
 	
 	handler = new plugin_handle(arr);

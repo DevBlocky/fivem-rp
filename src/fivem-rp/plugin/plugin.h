@@ -4,7 +4,6 @@
 class plugin
 {
 public:
-	bool enabled = true;
 	virtual ~plugin() = default;
 	virtual std::string get_name() { return "default_plugin"; }
 	virtual void on_start() {}

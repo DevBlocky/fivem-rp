@@ -78,7 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="inc\jsoncpp\jsoncpp.cpp" />
     <ClCompile Include="common.cpp" />
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="main.cpp" />
